@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const data = ["New York", "Boston", "Philly", "dallas"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        <li>{data[0]}</li>
+        <li>{data[1]}</li>
+        <li>{data[2]}</li>
+        <li>{data[3]}</li>
+       
+      </ul>
+
     </div>
   );
 }
