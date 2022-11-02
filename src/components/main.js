@@ -1,23 +1,28 @@
 import {data}  from "../assets/data"
-function Main() {
-    const dataSample = [{cityName:"New York", population: 244}, {cityName:"Boston", population: 244}, {cityName:"Philly", population: 244},{cityName: "Dallas", population: 244}]
-    return(
-<div className='container'>
- <div className="row">
-   {
-      data.map(item => {
-        return (
-          <div className="col-sm-3 city" key={item.id}>
-            <img src={item.image} alt={item.title} />
-            <p>{item.desc}</p>
-          </div>
-        ) 
-      })
-   }
+import ImageCard from "./imageCard"
 
- </div>
-</div>
-    )
+function Main() {
+    
+    // function imageCards(data) {
+    //   return(
+    //     <div className="col-sm-3 city" key={data.id}>
+    //     <h4>{data.title }</h4>
+    //     <img className="image" src={data.image} alt={data.title} />
+    //     <p className="hideText">{data.desc}</p>
+    //   </div>
+    //   )
+    // }
+
+    return(
+    <div className='container'>
+      <div className="row">
+        {/* { data.map(item => imageCards (item) )} */}
+        { data.map(item => <ImageCard data ={item} /> )}
+      </div>
+  </div>
+  )
 };
 
 export default Main;
+
+
